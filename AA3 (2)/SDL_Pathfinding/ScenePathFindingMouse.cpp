@@ -94,6 +94,15 @@ void ScenePathFindingMouse::update(float dtime, SDL_Event *event)
 				agents[i]->setPathfinding(new Dijkstra(maze));
 			}
 		}*/
+		//Canviar a Greedy
+		if (event->key.keysym.sym == SDLK_g)
+		{
+			system("cls");
+			for (int i = 0; i < agentNumber; i++)
+			{
+				agents[i]->setPathfinding(new Greedy(maze));
+			}
+		}
 		break;
 	case SDL_MOUSEMOTION:
 	case SDL_MOUSEBUTTONDOWN:

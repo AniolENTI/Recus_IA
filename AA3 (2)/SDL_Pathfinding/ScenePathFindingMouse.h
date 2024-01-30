@@ -11,6 +11,7 @@
 #include "Grid.h"
 #include "BFS.h"
 #include "Dijkstra.h"
+#include "Greedy.h"
 
 class ScenePathFindingMouse :
 	public Scene
