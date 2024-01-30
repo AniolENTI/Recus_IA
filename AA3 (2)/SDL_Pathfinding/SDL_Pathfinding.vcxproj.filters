@@ -51,6 +51,9 @@
     <ClCompile Include="Greedy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AEstrella.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h">
@@ -93,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Greedy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AEstrella.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

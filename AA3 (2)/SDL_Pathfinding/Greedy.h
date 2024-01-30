@@ -1,8 +1,8 @@
 #pragma once
 #include "Pathfinding.h"
+
 class Greedy : public Pathfinding
 {
-
 private:
 
 public:

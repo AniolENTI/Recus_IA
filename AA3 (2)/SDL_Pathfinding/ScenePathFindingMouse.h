@@ -12,6 +12,7 @@
 #include "BFS.h"
 #include "Dijkstra.h"
 #include "Greedy.h"
+#include "AEstrella.h"
 
 class ScenePathFindingMouse :
 	public Scene

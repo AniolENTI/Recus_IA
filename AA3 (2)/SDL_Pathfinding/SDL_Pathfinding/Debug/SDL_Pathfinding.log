@@ -1,25 +1,5 @@
-﻿  Agent.cpp
-  BFS.cpp
-  Dijkstra.cpp
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Dijkstra.cpp(15,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Greedy.cpp
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Greedy.cpp(16,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Grid.cpp
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(75,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(76,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(77,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(77,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(80,26): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(80,40): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(89,23): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(89,30): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-  main.cpp
-  Pathfinding.cpp
-D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\Pathfinding.cpp(51,40): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-  PathFollowing.cpp
+﻿  AEstrella.cpp
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\AEstrella.cpp(15,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   ScenePathFindingMouse.cpp
-  SDL_SimpleApp.cpp
-  Seek.cpp
-  utils.cpp
   Generating Code...
   SDL_Pathfinding.vcxproj -> D:\GIT_REPOS\Recus_IA\AA3 (2)\bin\SDL_Pathfinding.exe

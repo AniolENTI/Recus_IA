@@ -10,15 +10,12 @@ void Greedy::FindPath(Agent* agent, Vector2D target, Vector2D start)
 
 	std::multimap<int, Vector2D> frontier;
 
-	std::map<Vector2D, Vector2D> came_from;
-	std::map<Vector2D, int> cost_so_far;
+	std::map<Vector2D, Vector2D> cameFrom;
+	std::map<Vector2D, int> costSoFar;
 
-	came_from[grid->pix2cell(start)] = (0, 0);
-	cost_so_far[grid->pix2cell(start)] = 0;
+	cameFrom[grid->pix2cell(start)] = (0, 0);
+	costSoFar[grid->pix2cell(start)] = 0;
 	frontier.emplace(0, grid->pix2cell(start));
-
-
-	system("cls");
 
 	frontierCount = 0;
 	while (!frontier.empty())
@@ -33,19 +30,19 @@ void Greedy::FindPath(Agent* agent, Vector2D target, Vector2D start)
 
 		for (Vector2D next : getNeighbors(current)) {
 
-			if (cost_so_far.find(next) == cost_so_far.end()) {
+			if (costSoFar.find(next) == costSoFar.end()) {
 
 				int newCost = CalculateHeuristic(target, next);
-				cost_so_far[next] = newCost;
+				costSoFar[next] = newCost;
 				frontier.emplace(newCost, next);
 
-				came_from[next] = current;
+				cameFrom[next] = current;
 			}
 		}
 
 	}
 	std::cout << "Frontera: " << frontierCount << std::endl;
 
-	getPath(grid->pix2cell(start), target, came_from, agent);;
+	getPath(grid->pix2cell(start), target, cameFrom, agent);;
 
 }

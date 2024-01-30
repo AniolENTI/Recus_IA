@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AEstrella.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="BFS.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
@@ -145,6 +146,7 @@
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AEstrella.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="BFS.h" />
     <ClInclude Include="Dijkstra.h" />
