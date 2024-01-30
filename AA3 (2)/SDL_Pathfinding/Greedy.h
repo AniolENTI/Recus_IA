@@ -9,7 +9,5 @@ public:
 	Greedy(Grid* grid);
 
 	void FindPath(Agent* agent, Vector2D target, Vector2D start) override;
-
-	int CalculateHeuristic(Vector2D target, Vector2D current);
 };
 

@@ -21,6 +21,7 @@ public:
 
 	//Calculs
 	virtual void FindPath(Agent* agent, Vector2D target, Vector2D start) {};
+	int CalculateHeuristic(Vector2D target, Vector2D current);
 
 	//Setters i Getters
 	void setGrid(Grid* grid);

@@ -49,8 +49,3 @@ void Greedy::FindPath(Agent* agent, Vector2D target, Vector2D start)
 	getPath(grid->pix2cell(start), target, came_from, agent);;
 
 }
-
-int Greedy::CalculateHeuristic(Vector2D target, Vector2D current)
-{
-	return std::abs(target.x - current.x) + std::abs(target.y - current.y);
-}

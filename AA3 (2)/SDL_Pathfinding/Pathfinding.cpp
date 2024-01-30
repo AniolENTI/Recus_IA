@@ -27,12 +27,10 @@ std::vector<Vector2D> Pathfinding::getNeighbors(Vector2D pos)
 	}
 
 	return neighbors;
-
 }
 void Pathfinding::getPath(Vector2D start, Vector2D goal, std::map<Vector2D, Vector2D> came_from, Agent* agent) {
 	std::vector<Vector2D> path;
 	Vector2D current = goal;
-
 
 	while (current != start) {
 		path.push_back(current);
@@ -46,7 +44,9 @@ void Pathfinding::getPath(Vector2D start, Vector2D goal, std::map<Vector2D, Vect
 		agent->addPathPoint(grid->cell2pix(path.back()));
 		path.pop_back();
 	}
+}
 
-
-
+int Pathfinding::CalculateHeuristic(Vector2D target, Vector2D current)
+{
+	return std::abs(target.x - current.x) + std::abs(target.y - current.y);
 }
