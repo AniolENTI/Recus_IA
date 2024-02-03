@@ -22,6 +22,17 @@ Grid::Grid(char* filename)
 	}
 	SDL_assert(terrain.size() == num_cell_y);
 	infile.close();
+
+	for (int i = 0; i < getNumCellX(); i++)
+	{
+		std::vector<int> gridWeight;
+
+		for (int e = 0; e < getNumCellY(); e++)
+		{
+			gridWeight.push_back(1);
+		}
+		weightCost.push_back(gridWeight);
+	}
 }
 
 Grid::~Grid()

@@ -86,14 +86,14 @@ void ScenePathFindingMouse::update(float dtime, SDL_Event *event)
 			}
 		}
 		//Canviar a Dijkstra
-		/*if (event->key.keysym.sym == SDLK_d)
+		if (event->key.keysym.sym == SDLK_d)
 		{
 			system("cls");
 			for (int i = 0; i < agentNumber; i++)
 			{
 				agents[i]->setPathfinding(new Dijkstra(maze));
 			}
-		}*/
+		}
 		//Canviar a Greedy
 		if (event->key.keysym.sym == SDLK_g)
 		{
