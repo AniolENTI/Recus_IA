@@ -63,7 +63,7 @@ SceneExercici2::SceneExercici2()
 
 			enemiePath.push_back(rand_cell);
 		}
-		enemiesPaths.push_back(enemiePath);
+		enemyPaths.push_back(enemiePath);
 
 
 		Agent* agent = new Agent;
@@ -151,9 +151,9 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 	{
 		if (enemies[i]->getPathSize() == 0)
 		{
-			for (int e = 0; e < enemiesPaths[i].size(); e++)
+			for (int e = 0; e < enemyPaths[i].size(); e++)
 			{
-				enemies[i]->AddTargets(enemiesPaths[i][e]);
+				enemies[i]->AddTargets(enemyPaths[i][e]);
 			}
 			enemies[i]->FindPath((0, 0));
 		}
@@ -170,19 +170,19 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 
 
 
-	if (agents[0]->getPathSize() != 0 && (currentTime - delayTimeComprovation) > 0.5f)
+	if (agents[0]->getPathSize() != 0 && (currentTime - delayTime) > 0.5f)
 	{
 		for (int i = 0; i < enemies.size(); i++)
 		{
-			if (DistanceToEnemy(maze->pix2cell(agents[0]->getPosition()), maze->pix2cell(enemies[i]->getPosition())) < 6)
+			if (CalculateDistance(maze->pix2cell(agents[0]->getPosition()), maze->pix2cell(enemies[i]->getPosition())) < 6)
 			{
-				delayTimeComprovation = currentTime;
+				delayTime = currentTime;
 
 				// Convierte la duración a un valor float
 
 
 				agents[0]->clearPath();
-				agents[0]->FindPath(agents[0]->targetSaved);
+				agents[0]->FindPath(agents[0]->getSavedTarget());
 				break;
 			}
 		}
@@ -203,7 +203,7 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 			Vector2D cell = maze->pix2cell(Vector2D((float)(event->button.x), (float)(event->button.y)));
 			if (maze->isValidCell(cell)) {
 
-				agents[0]->targetSaved = cell;
+				agents[0]->saveTarget(cell);
 				agents[0]->FindPath(cell);
 
 				//agents[0]->addPathPoint(maze->cell2pix(cell));
@@ -329,7 +329,7 @@ bool SceneExercici2::loadTextures(char* filename_bg, char* filename_coin)
 	return true;
 }
 
-int SceneExercici2::DistanceToEnemy(Vector2D player, Vector2D enemy)
+int SceneExercici2::CalculateDistance(Vector2D player, Vector2D enemy)
 {
 	return std::abs(enemy.x - player.x) + std::abs(enemy.y - player.y);
 }

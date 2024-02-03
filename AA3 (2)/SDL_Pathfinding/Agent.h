@@ -44,10 +44,12 @@ private:
 	int sprite_h;
 
 	bool isEnemy;
+	Vector2D savedTarget;
 
 public:
 	Agent();
 	~Agent();
+
 	Vector2D getPosition();
 	Vector2D getTarget();
 	Vector2D getVelocity();
@@ -55,6 +57,13 @@ public:
 	float getMaxForce();
 	float getMass();
 	bool getEnemy();
+	int getCurrentTargetIndex();
+	int getPathSize();
+	Vector2D getPathPoint(int idx);
+	int getFrontierCount();
+	std::vector<Vector2D> getTargets();
+	Vector2D getSavedTarget();
+
 	void setBehavior(SteeringBehavior *behavior);
 	void setPosition(Vector2D position);
 	void setTarget(Vector2D target);
@@ -64,18 +73,12 @@ public:
 	void addPathPoint(Vector2D point);
 	void setCurrentTargetIndex(int idx);
 	void setPathfinding(Pathfinding* pathfinding);
-	int getCurrentTargetIndex();
-	int getPathSize();
-	Vector2D getPathPoint(int idx);
+	
 	void clearPath();
 	void update(float dtime, SDL_Event *event);
 	void draw();
 	bool loadSpriteTexture(char* filename, int num_frames=1);
 	void FindPath(Vector2D pos);
-	int getFrontierCount();
-	
-	//CANVIAR NOMS
-	std::vector<Vector2D> GetTargets();
 	void AddTargets(Vector2D pos);
-	Vector2D targetSaved;
+	void saveTarget(Vector2D target);
 };

@@ -1,2 +1,17 @@
-﻿  main.cpp
+﻿  SceneExercici2.cpp
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(54,22): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(102,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(109,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(150,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(154,22): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(158,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(164,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(175,21): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(218,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(230,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(256,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(260,20): warning C4018: '<': signed/unsigned mismatch
+D:\GIT_REPOS\Recus_IA\AA3 (2)\SDL_Pathfinding\SceneExercici2.cpp(334,38): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   SDL_Pathfinding.vcxproj -> D:\GIT_REPOS\Recus_IA\AA3 (2)\bin\SDL_Pathfinding.exe

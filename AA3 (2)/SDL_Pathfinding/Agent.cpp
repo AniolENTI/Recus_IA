@@ -231,7 +231,7 @@ bool Agent::getEnemy()
 	return isEnemy;
 }
 
-std::vector<Vector2D> Agent::GetTargets()
+std::vector<Vector2D> Agent::getTargets()
 {
 	return pathfinding->targets;
 }
@@ -239,4 +239,14 @@ std::vector<Vector2D> Agent::GetTargets()
 void Agent::AddTargets(Vector2D pos)
 {
 	pathfinding->targets.push_back(pos);
+}
+
+void Agent::saveTarget(Vector2D target)
+{
+	savedTarget = target;
+}
+
+Vector2D Agent::getSavedTarget()
+{
+	return savedTarget;
 }
