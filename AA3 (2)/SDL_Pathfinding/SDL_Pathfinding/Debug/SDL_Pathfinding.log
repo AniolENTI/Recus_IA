@@ -1,27 +1,2 @@
-﻿  AEstrella.cpp
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\AEstrella.cpp(15,38): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-  Agent.cpp
-  BFS.cpp
-  Dijkstra.cpp
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Dijkstra.cpp(15,39): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-  Greedy.cpp
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Greedy.cpp(16,38): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-  Grid.cpp
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(86,11): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(87,11): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(88,22): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(88,19): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(91,26): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(91,40): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(100,23): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Grid.cpp(100,30): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
-  main.cpp
-  Pathfinding.cpp
-E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\SDL_Pathfinding\Pathfinding.cpp(51,40): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-  PathFollowing.cpp
-  ScenePathFindingMouse.cpp
-  SDL_SimpleApp.cpp
-  Seek.cpp
-  utils.cpp
-  Generando código...
-  SDL_Pathfinding.vcxproj -> E:\Uni\2023-2024\IA\Recus_IA\AA3 (2)\bin\SDL_Pathfinding.exe
+﻿  main.cpp
+  SDL_Pathfinding.vcxproj -> D:\GIT_REPOS\Recus_IA\AA3 (2)\bin\SDL_Pathfinding.exe

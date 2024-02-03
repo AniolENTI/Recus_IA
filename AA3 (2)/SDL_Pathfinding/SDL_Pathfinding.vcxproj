@@ -140,10 +140,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pathfinding.cpp" />
     <ClCompile Include="PathFollowing.cpp" />
+    <ClCompile Include="SceneExercici2.cpp" />
     <ClCompile Include="ScenePathFindingMouse.cpp" />
     <ClCompile Include="SDL_SimpleApp.cpp" />
     <ClCompile Include="Seek.cpp" />
     <ClCompile Include="utils.cpp" />
+    <ClCompile Include="VariacioAEstrella.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AEstrella.h" />
@@ -156,10 +158,12 @@
     <ClInclude Include="Pathfinding.h" />
     <ClInclude Include="PathFollowing.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneExercici2.h" />
     <ClInclude Include="ScenePathFindingMouse.h" />
     <ClInclude Include="SDL_SimpleApp.h" />
     <ClInclude Include="Seek.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="VariacioAEstrella.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <ItemGroup>

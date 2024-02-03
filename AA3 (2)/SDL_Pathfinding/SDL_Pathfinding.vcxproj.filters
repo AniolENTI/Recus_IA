@@ -54,6 +54,12 @@
     <ClCompile Include="AEstrella.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SceneExercici2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariacioAEstrella.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h">
@@ -99,6 +105,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AEstrella.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneExercici2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VariacioAEstrella.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

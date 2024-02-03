@@ -76,6 +76,11 @@ void Agent::setVelocity(Vector2D _velocity)
 	velocity = _velocity;
 }
 
+void Agent::setMaxVelocity(float _maximum)
+{
+	max_velocity = _maximum;
+}
+
 void Agent::update(float dtime, SDL_Event *event)
 {
 
@@ -214,4 +219,24 @@ void Agent::FindPath(Vector2D pos)
 int Agent::getFrontierCount()
 {
 	return pathfinding->frontierCount;
+}
+
+void Agent::setEnemy(bool is)
+{
+	isEnemy = is;
+}
+
+bool Agent::getEnemy()
+{
+	return isEnemy;
+}
+
+std::vector<Vector2D> Agent::GetTargets()
+{
+	return pathfinding->targets;
+}
+
+void Agent::AddTargets(Vector2D pos)
+{
+	pathfinding->targets.push_back(pos);
 }
