@@ -178,9 +178,6 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 			{
 				delayTime = currentTime;
 
-				// Convierte la duración a un valor float
-
-
 				agents[0]->clearPath();
 				agents[0]->FindPath(agents[0]->getSavedTarget());
 				break;
@@ -205,9 +202,6 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 
 				agents[0]->saveTarget(cell);
 				agents[0]->FindPath(cell);
-
-				//agents[0]->addPathPoint(maze->cell2pix(cell));
-
 			}
 
 		}
@@ -230,9 +224,6 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 	for (int i = 0; i < enemies.size(); i++)
 	{
 		enemies[i]->update(dtime, event);
-
-		// if we have arrived to the coin, replace it in a random cell!
-
 	}
 }
 
