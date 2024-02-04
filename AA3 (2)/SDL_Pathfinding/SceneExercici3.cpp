@@ -10,7 +10,9 @@ SceneExercici3::SceneExercici3()
 
 	srand((unsigned int)time(NULL));
 
-	for (int i = 0; i < 1; i++)
+	agentNumber = 1;
+
+	for (int i = 0; i < agentNumber; i++)
 	{
 		Agent* agent = new Agent;
 		agent->loadSpriteTexture("../res/soldier.png", 4);
@@ -33,9 +35,6 @@ SceneExercici3::SceneExercici3()
 		agent->setPathfinding(new VariacioAEstrella(maze));
 
 		agents.push_back(agent);
-
-
-
 	}
 
 
@@ -46,7 +45,7 @@ SceneExercici3::SceneExercici3()
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		agents[i]->setPosition(maze->cell2pix(rand_cell));
 	}
@@ -65,7 +64,7 @@ SceneExercici3::~SceneExercici3()
 	if (coin_texture)
 		SDL_DestroyTexture(coin_texture);
 
-	for (int i = 0; i < (int)agents.size(); i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		delete agents[i];
 	}
@@ -87,17 +86,17 @@ void SceneExercici3::update(float dtime, SDL_Event* event)
 			Vector2D cell = maze->pix2cell(Vector2D((float)(event->button.x), (float)(event->button.y)));
 			if (maze->isValidCell(cell)) {
 
-				bool alreadyInList = false;
+				bool inTargetList = false;
 
 				for (int i = 0; i < agents[0]->getTargets().size(); i++)
 				{
 					if (cell == agents[0]->getTargets()[i])
 					{
-						alreadyInList = true;
+						inTargetList = true;
 						break;
 					}
 				}
-				if (!alreadyInList)
+				if (!inTargetList)
 					agents[0]->AddTargets(cell);
 			}
 		}
@@ -109,7 +108,7 @@ void SceneExercici3::update(float dtime, SDL_Event* event)
 	default:
 		break;
 	}
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		agents[i]->update(dtime, event);
 
@@ -146,7 +145,7 @@ void SceneExercici3::draw()
 			SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), 0, j, SRC_WIDTH, j);
 		}
 	}
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		agents[i]->draw();
 	}

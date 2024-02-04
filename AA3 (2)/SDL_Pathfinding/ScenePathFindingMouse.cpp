@@ -119,43 +119,34 @@ void ScenePathFindingMouse::update(float dtime, SDL_Event *event)
 		{
 			for (int i = 0; i < agentNumber; i++)
 			{
-
 				agents[i]->setPosition(start[i]);
-
 				agents[i]->FindPath(target[i]);
-
-
-
-
-
 			}
-			int lower = 10000;
+			int minim = 10000;
 			for (int i = 0; i < agentNumber; i++)
 			{
-				if (agents[i]->getFrontierCount() < lower)
+				if (agents[i]->getFrontierCount() < minim)
 				{
-					lower = agents[i]->getFrontierCount();
+					minim = agents[i]->getFrontierCount();
 				}
 			}
-			int higher = 0;
+			int maxim = 0;
 			for (int i = 0; i < agentNumber; i++)
 			{
-				if (agents[i]->getFrontierCount() > higher)
+				if (agents[i]->getFrontierCount() > maxim)
 				{
-					higher = agents[i]->getFrontierCount();
+					maxim = agents[i]->getFrontierCount();
 				}
 			}
-			float media = 0;
+			float mitjana = 0;
 
 			for (int i = 0; i < agentNumber; i++)
 			{
-				media += agents[i]->getFrontierCount();
+				mitjana += agents[i]->getFrontierCount();
 			}
-			media /= 20;
-			std::cout << "---------------------------------------------------------------" << std::endl;
-			std::cout << "---------------------------------------------------------------" << std::endl;
-			std::cout << "---------------------------------------------------------------" << std::endl;
-			std::cout << " || " << "BFS" << " || " << std::to_string(lower) << " || " << std::to_string(higher) << " || " << std::to_string(media) << " || " << std::endl;
+			mitjana /= agentNumber;
+
+			std::cout << "Minim: " << std::to_string(minim) << " Maxim: " << std::to_string(maxim) << " Mitjana: " << std::to_string(mitjana) << std::endl;
 		}
 		break;
 	default:

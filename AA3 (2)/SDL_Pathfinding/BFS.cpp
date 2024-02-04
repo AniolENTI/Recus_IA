@@ -9,12 +9,9 @@ void BFS::FindPath(Agent* agent, Vector2D target, Vector2D start)
 {
 	std::queue<Vector2D> frontier;
 
-	std::map<Vector2D, Vector2D> came_from;
-
+	std::map<Vector2D, Vector2D> cameFrom;
 
 	frontier.push(grid->pix2cell(start));
-
-	system("cls");
 
 	frontierCount = 0;
 	while (!frontier.empty())
@@ -28,15 +25,17 @@ void BFS::FindPath(Agent* agent, Vector2D target, Vector2D start)
 		}
 
 		for (Vector2D next : getNeighbors(current)) {
-			if (came_from[next] == Vector2D(0, 0)) {
+			if (cameFrom[next] == Vector2D(0, 0)) {
 				frontier.push(next);
-				came_from[next] = current;
+				cameFrom[next] = current;
 			}
 		}
 
 	}
+
+	system("cls");
 	std::cout << "Frontera: " << frontierCount << std::endl;
 
-	getPath(grid->pix2cell(start), target, came_from, agent);
+	getPath(grid->pix2cell(start), target, cameFrom, agent);
 }
 

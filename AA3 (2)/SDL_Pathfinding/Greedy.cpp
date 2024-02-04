@@ -7,7 +7,6 @@ Greedy::Greedy(Grid* grid) :Pathfinding(grid)
 
 void Greedy::FindPath(Agent* agent, Vector2D target, Vector2D start)
 {
-
 	std::multimap<int, Vector2D> frontier;
 
 	std::map<Vector2D, Vector2D> cameFrom;
@@ -41,8 +40,9 @@ void Greedy::FindPath(Agent* agent, Vector2D target, Vector2D start)
 		}
 
 	}
+
+	system("cls");
 	std::cout << "Frontera: " << frontierCount << std::endl;
 
-	getPath(grid->pix2cell(start), target, cameFrom, agent);;
-
+	getPath(grid->pix2cell(start), target, cameFrom, agent);
 }

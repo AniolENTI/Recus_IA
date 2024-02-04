@@ -16,7 +16,6 @@ void AEstrella::FindPath(Agent* agent, Vector2D target, Vector2D start)
 	costSoFar[grid->pix2cell(start)] = CalculateHeuristic(target, grid->pix2cell(start));
 	frontier.emplace(0, grid->pix2cell(start));
 
-
 	frontierCount = 0;
 	while (!frontier.empty())
 	{
@@ -43,9 +42,9 @@ void AEstrella::FindPath(Agent* agent, Vector2D target, Vector2D start)
 		}
 
 	}
+
+	system("cls");
 	std::cout << "Frontera: " << frontierCount << std::endl;
 
-
-	getPath(grid->pix2cell(start), target, cameFrom, agent);;
-
+	getPath(grid->pix2cell(start), target, cameFrom, agent);
 }

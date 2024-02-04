@@ -28,6 +28,9 @@ private:
 	std::vector<Agent*> agents;
 	Vector2D coinPosition;
 
+	int agentNumber;
+	int enemyNumber;
+
 	std::vector<Agent*> enemies;
 	std::vector < std::vector<Vector2D>> enemyPaths;
 

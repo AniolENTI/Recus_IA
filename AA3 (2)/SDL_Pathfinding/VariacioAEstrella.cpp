@@ -61,9 +61,11 @@ void VariacioAEstrella::FindPath(Agent* agent, Vector2D target, Vector2D start)
 		}
 
 	}
+
+	system("cls");
 	std::cout << "Frontera: " << frontierCount << std::endl;
 
-	getPath(grid->pix2cell(start), final, cameFrom, agent);
+	getPath(grid->pix2cell(start), target, cameFrom, agent);
 }
 
 int VariacioAEstrella::getSmallerHeuristic(Vector2D current)

@@ -11,7 +11,10 @@ SceneExercici2::SceneExercici2()
 	currentTime = 0;
 	srand((unsigned int)time(NULL));
 
-	for (int i = 0; i < 1; i++)
+	agentNumber = 1;
+	enemyNumber = 2;
+
+	for (int i = 0; i < agentNumber; i++)
 	{
 		Agent* agent = new Agent;
 		agent->loadSpriteTexture("../res/soldier.png", 4);
@@ -31,22 +34,17 @@ SceneExercici2::SceneExercici2()
 
 		target.push_back(rand_cell2);
 
-
 		agents.push_back(agent);
 
-
-
-		agent->setPathfinding(new Dijkstra(maze));
+		agent->setPathfinding(new AEstrella(maze));
 	}
 
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < enemyNumber; i++)
 	{
 		std::vector<Vector2D> enemiePath;
 		for (int i = 0; i < 8; i++)
 		{
 			Vector2D rand_cell(-1, -1);
-
-
 
 			while (!maze->isValidCell(rand_cell))
 				rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
@@ -99,14 +97,14 @@ SceneExercici2::SceneExercici2()
 	while (!maze->isValidCell(rand_cell))
 		rand_cell = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 
-	for (int i = 0; i < agents.size(); i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		agents[i]->setPosition(maze->cell2pix(rand_cell));
 	}
 
 	std::vector<Vector2D> pos;
 
-	for (int i = 0; i < enemies.size(); i++)
+	for (int i = 0; i < enemyNumber; i++)
 	{
 
 		Vector2D rand_cell(-1, -1);
@@ -138,16 +136,21 @@ SceneExercici2::~SceneExercici2()
 	if (coin_texture)
 		SDL_DestroyTexture(coin_texture);
 
-	for (int i = 0; i < (int)agents.size(); i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		delete agents[i];
+	}
+
+	for (int i = 0; i < enemyNumber; i++)
+	{
+		delete enemies[i];
 	}
 }
 
 void SceneExercici2::update(float dtime, SDL_Event* event)
 {
 	currentTime += dtime;
-	for (int i = 0; i < enemies.size(); i++)
+	for (int i = 0; i < enemyNumber; i++)
 	{
 		if (enemies[i]->getPathSize() == 0)
 		{
@@ -161,7 +164,7 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 	}
 	std::vector<Vector2D> pos;
 
-	for (int i = 0; i < enemies.size(); i++)
+	for (int i = 0; i < enemyNumber; i++)
 	{
 
 		pos.push_back(maze->pix2cell(enemies[i]->getPosition()));
@@ -172,7 +175,7 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 
 	if (agents[0]->getPathSize() != 0 && (currentTime - delayTime) > 0.5f)
 	{
-		for (int i = 0; i < enemies.size(); i++)
+		for (int i = 0; i < enemyNumber; i++)
 		{
 			if (CalculateDistance(maze->pix2cell(agents[0]->getPosition()), maze->pix2cell(enemies[i]->getPosition())) < 6)
 			{
@@ -203,13 +206,12 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 				agents[0]->saveTarget(cell);
 				agents[0]->FindPath(cell);
 			}
-
 		}
 		break;
 	default:
 		break;
 	}
-	for (int i = 0; i < agents.size(); i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		agents[i]->update(dtime, event);
 
@@ -221,7 +223,7 @@ void SceneExercici2::update(float dtime, SDL_Event* event)
 				coinPosition = Vector2D((float)(rand() % maze->getNumCellX()), (float)(rand() % maze->getNumCellY()));
 		}
 	}
-	for (int i = 0; i < enemies.size(); i++)
+	for (int i = 0; i < enemyNumber; i++)
 	{
 		enemies[i]->update(dtime, event);
 	}
@@ -244,11 +246,11 @@ void SceneExercici2::draw()
 			SDL_RenderDrawLine(TheApp::Instance()->getRenderer(), 0, j, SRC_WIDTH, j);
 		}
 	}
-	for (int i = 0; i < agents.size(); i++)
+	for (int i = 0; i < agentNumber; i++)
 	{
 		agents[i]->draw();
 	}
-	for (int i = 0; i < enemies.size(); i++)
+	for (int i = 0; i < enemyNumber; i++)
 	{
 		enemies[i]->draw();
 	}
@@ -278,8 +280,6 @@ void SceneExercici2::drawMaze()
 			else {
 				// Do not draw if it is not necessary (bg is already black)
 			}
-
-
 		}
 	}
 	//Alternative: render a backgroud texture:
